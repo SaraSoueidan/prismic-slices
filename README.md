@@ -1,2 +1,7 @@
-# prismic-slices
-Slices for the Prismic Slice Machine
+# To Start
+
+```
+npm install
+
+npm start
+```

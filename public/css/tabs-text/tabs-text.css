@@ -1,0 +1,76 @@
+/**************************************************\
+ * Tabs | Text component-specific styles.
+ * Main general styles are in the _tabs.scss file
+ ***************************************************/
+.c-tabs__tablist--text .c-tabs__tab {
+  padding: 1rem;
+  color: #000;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: 2px dotted transparent; }
+  .c-tabs__tablist--text .c-tabs__tab[aria-selected="true"] {
+    color: var(--color--primary); }
+  .c-tabs__tablist--text .c-tabs__tab:focus, .c-tabs__tablist--text .c-tabs__tab.focus-visible {
+    outline: none;
+    border-color: currentColor;
+    outline-offset: -4px; }
+  .c-tabs__tablist--text .c-tabs__tab:focus:not(:focus-visible) {
+    outline: none;
+    border-color: transparent; }
+  .js-focus-visible .c-tabs__tablist--text .c-tabs__tab:focus:not(.focus-visible) {
+    outline: none;
+    border-color: transparent; }
+
+.ps-tabs--text .c-tabs__tablist {
+  background: linear-gradient(to bottom, var(--color-grey-90), var(--color-grey-90)), linear-gradient(90deg, #fff 30%, rgba(255, 255, 255, 0)), linear-gradient(90deg, rgba(255, 255, 255, 0), #fff 70%) 0 100%, radial-gradient(farthest-side at 0 50%, rgba(0, 0, 0, 0.25), transparent), radial-gradient(farthest-side at 100% 50%, rgba(0, 0, 0, 0.25), transparent) 0 100%;
+  background-size: 100% 4px, 20px 100%, 20px 100%, 10px 100%, 10px 100%;
+  background-position: left bottom, 0 0, 100%, 0 0, 100%;
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat;
+  background-attachment: local, local, local, scroll, scroll;
+  padding: 0;
+  position: relative; }
+  @media all and (min-width: 50em) {
+    .ps-tabs--text .c-tabs__tablist[aria-orientation="vertical"] {
+      flex-direction: column;
+      align-items: flex-start;
+      background-size: 4px 100%;
+      background-position: left top;
+      background-repeat: no-repeat; } }
+
+@media all and (min-width: 50em) {
+  .ps-tabs--text [aria-orientation="vertical"] .c-tabs__tab {
+    padding: 1.5rem;
+    border-left: 4px solid transparent;
+    border-bottom: none; } }
+
+@media all and (min-width: 50em) {
+  .ps-tabs--text [aria-orientation="vertical"] .c-tabs__tab[aria-selected="true"] {
+    border-bottom: none;
+    border-left: 4px solid currentColor; } }
+
+.ps-tabs--text .c-tabs__tab {
+  font-weight: normal;
+  padding: 1.5rem;
+  border-bottom: 4px solid transparent;
+  border-left: none; }
+  .ps-tabs--text .c-tabs__tab[aria-selected="true"] {
+    color: var(--color--primary);
+    font-weight: bold;
+    border-bottom: 4px solid currentColor; }
+  .ps-tabs--text .c-tabs__tab:hover {
+    color: var(--color--primary); }
+  .ps-tabs--text .c-tabs__tab:focus, .ps-tabs--text .c-tabs__tab.focus-visible {
+    background-color: var(--color-grey-90);
+    font-weight: bold;
+    outline: none; }
+
+/* tabs content specific styles */
+@supports (display: grid) {
+  @media all and (min-width: 50em) {
+    .c-tabs__tabpanel__modules {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-column-gap: var(--h-padding);
+      grid-row-gap: var(--v-margin); } }
+  .c-tabs__tabpanel__modules .c-tabs__tabpanel__module__img {
+    margin-bottom: 1rem; } }
