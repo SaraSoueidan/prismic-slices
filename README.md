@@ -8,7 +8,7 @@ As you’d expect, these components are built with responsiveness, browser compa
 
 ## Installing 
 
-The library is built using [Fractal](https://fractal.build). You can get it up and running pretty quickly:
+The library is built using [Fractal](https://fractal.build). To install and run with a live dev server:
 
 ```
 npm install
@@ -19,7 +19,6 @@ and then
 npm start
 ```
 
-this will fire up a live development server.
 
 ## License
 
